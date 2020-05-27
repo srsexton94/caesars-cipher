@@ -1,0 +1,20 @@
+{
+  "name": "caesars-cipher",
+  "version": "1.0.0",
+  "description": "A full stack solution to Caesar's Cipher.  Will take an input phrase and a specified offset ammount, and output the correctly encoded solution.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srsexton94/caesars-cipher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srsexton94/caesars-cipher/issues"
+  },
+  "homepage": "https://github.com/srsexton94/caesars-cipher#readme"
+}
