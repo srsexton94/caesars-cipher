@@ -26,3 +26,4 @@ As a user I would like to be able to...
 ## Aditional Resources
 In addition to documentation about, additional resources used for additional learning/guidance:
 * [Codevolution Angular Forms Tutorial](https://www.youtube.com/watch?v=nGr3C3wbh9c&list=PLC3y8-rFHvwhwL-XH04cHOpJnkgRKykFi)
+* [Academind Learn Nest.js from Scratch](https://www.youtube.com/watch?v=F_oOtaxb0L8)
