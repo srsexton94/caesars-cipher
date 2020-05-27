@@ -7,6 +7,7 @@
       <label>Phrase:
         <input
           [class.invalid]="phrase.invalid && phrase.touched"
+          id="phrase"
           type="text"
           #phrase="ngModel"
           [(ngModel)]="cipherModel.phrase"
@@ -24,16 +25,18 @@
       <label>Offset by
         <input
           [class.invalid]="offset.invalid && offset.touched"
+          id="offset"
           type="number"
           #offset="ngModel"
           [(ngModel)]="cipherModel.offset"
           name="offset"
+          min="0"
           required
         >
           Places
       </label>
       <small [class.hidden]="offset.valid || offset.untouched">
-        Specify how many places to offset your phrase!
+        Specify how many places to offset your phrase?
       </small>
     </fieldset>
 
@@ -41,7 +44,7 @@
   </form>
 
   <section class="display">
-    {{ cipherForm.form.valid }}
+    {{ decodedPhrase }}
   </section>
 
 </main>

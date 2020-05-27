@@ -1,22 +1,63 @@
+$error: #b71301;
+$form: rgba(219, 239, 240, .9);
+$shadow: rgba(58, 33, 24, .75);
+$text: #130801;
+
+main {
+  background: url('../trees.jpg') no-repeat center center scroll;
+  background-color: #fff;
+  background-size: cover;
+  height: 120vh;
+  margin-top: -10vh;
+  margin-left: -10px;
+  width: 105vw;
+}
+
 button {
   display: block;
   margin: 5vh auto;
 }
+
 form {
-  border: 1px solid black;
+  background-color: $form;
+  border-radius: 15%;
+  box-shadow: -2px 4px 2px 2px $shadow;
+  color: $text;
   margin: 5vh auto;
   padding: 3rem 0;
   text-align: center;
-  width: 30vw;
+  width: 50vw;
+
+  button {
+    border-color: $text;
+    border-radius: 15%;
+    box-shadow: -1px 1px 1px 1px rgba(58, 33, 24, .35);
+    color: $text;
+    font-style: italic;
+    font-size: .85em;
+    height: 7vh;
+    margin: 0 auto;
+    width: 10vw;
+  }
 
   fieldset {
     border: 0px;
+    font-family: monospace;
+    font-size: 1.25em;
+    padding: 15px;
+  }
+
+  input {
+    border-radius: 10%;
+    height: 2rem;
+    text-align: center;
   }
 
   small {
-    color: red;
+    color: $error;
     display: block;
     font-size: .5em;
+    text-align: center;
   }
 
   .hidden {
@@ -24,13 +65,38 @@ form {
   }
 
   .invalid {
-    border: 2px solid red;
+    border: 2px solid $error;
+  }
+
+  #phrase {
+    font-size: .75em;
+    width: 25vw;
+  }
+
+  #offset {
+    width: 4vw;
   }
 }
 
+h1 {
+  background-color: $form;
+  box-shadow: -4px 3px 2px 2px $shadow;
+  font-size: 4em;
+  font-family: cursive;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  text-align: center;
+}
+
 .display {
-  border: 1px solid black;
-  height: 10vh;
-  margin: 5vh auto;
-  width: 40vw;
+  background-color: $form;
+  box-shadow: -2px 4px 2px 2px $shadow;
+  font-family: monospace;
+  font-size: 2em;
+  height: 12vh;
+  margin: 8vh auto;
+  padding-top: 6vh;
+  padding-bottom: 0;
+  text-align: center;
+  width: 105vw;
 }

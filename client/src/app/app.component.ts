@@ -10,7 +10,7 @@ import { EncodingService } from './encoding.service'
 export class AppComponent {
   title = 'caesars-cipher';
 
-  decodedPhrase: string = '';
+  decodedPhrase: string = 'Placeholder text';
 
   cipherModel = new Cipher('', 0)
 
