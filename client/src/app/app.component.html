@@ -1,7 +1,7 @@
 <main class="toolbar" role="banner">
   <h1>Caesar's Cipher</h1>
 
-  <form #cipherForm="ngForm">
+  <form #cipherForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
 
     <fieldset>
       <label>Phrase:
@@ -37,13 +37,11 @@
       </small>
     </fieldset>
 
-    <button type="submit">Decipher it!</button>
+    <button [disabled]="cipherForm.form.invalid" type="submit">Decipher it!</button>
   </form>
 
   <section class="display">
-    {{ phrase.untouched }}
-    {{ phrase.pristine }}
-    {{ phrase.valid }}
+    {{ cipherForm.form.valid }}
   </section>
 
 </main>

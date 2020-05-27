@@ -15,7 +15,7 @@ export class AppComponent {
 
   constructor() { }
 
-  // decipher() {
-  //   this.decodedPhrase = this.phrase + this.offset
-  // }
+  onSubmit() {
+    console.log(this.cipherModel)
+  }
 }
