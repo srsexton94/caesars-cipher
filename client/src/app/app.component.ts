@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Cipher } from './cipher'
+import { Cipher } from './cipher';
+import { EncodingService } from './encoding.service.ts'
 
 @Component({
   selector: 'app-root',
@@ -13,9 +14,15 @@ export class AppComponent {
 
   cipherModel = new Cipher('', 0)
 
-  constructor() { }
+  constructor(
+    private _encodingService: EncodingService
+  ) {}
 
   onSubmit() {
-    console.log(this.cipherModel)
+    this._encodingService.encode(this.cipherModel)
+      .subscribe(
+        data => console.log('Success! ', data)
+        error => console.error('Error! ', error)
+      )
   }
 }
