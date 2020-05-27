@@ -21,7 +21,7 @@ As a user I would like to be able to...
 
 ## Back-end Specifications
 * contain the logic for the Caesar's Cipher
-* implement uniting testing
+* implement uniting testing (api/src/app.controller.spec.ts)
 
 ## Aditional Resources
 In addition to documentation about, additional resources used for additional learning/guidance:
