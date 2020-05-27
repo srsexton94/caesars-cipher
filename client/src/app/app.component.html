@@ -1,20 +1,25 @@
 <main class="toolbar" role="banner">
-  <form>
-      <legend>Caesar's Cipher</legend>
-      <fieldset>
-        <label>Phrase:
-          <input type="text" placeholder="I love JavaScript!">
-        </label>
-      </fieldset>
-      <fieldset>
-        <label>Offset
-          <input type="number">
-        </label>
-        <input type="submit">
-      </fieldset>
-    </form>
-    <button (click)="getFormFields()">Scream!</button>
-    <section class="display">
-      {{ decodedPhrase }}
-    </section>
+  <h1>Caesar's Cipher</h1>
+
+  <form #cipherForm="ngForm">
+
+    <fieldset>
+      <label>Phrase:
+        <input type="text" ngModel name="phrase" placeholder="I love JavaScript!">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <label>Offset by..
+        <input type="number" ngModel name="offset">  Places
+      </label>
+    </fieldset>
+
+    <button type="submit">Decipher it!</button>
+  </form>
+
+  <section class="display">
+    {{ cipherForm.value | json }}
+  </section>
+
 </main>

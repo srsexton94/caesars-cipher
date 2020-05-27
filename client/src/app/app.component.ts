@@ -9,10 +9,12 @@ export class AppComponent {
   title = 'caesars-cipher';
 
   decodedPhrase: string = '';
+  phrase: string = '';
+  offset: number = 0;
 
   constructor() { }
 
-  getFormFields() {
-    this.decodedPhrase += 'a'
+  decipher() {
+    this.decodedPhrase = this.phrase + this.offset
   }
 }
