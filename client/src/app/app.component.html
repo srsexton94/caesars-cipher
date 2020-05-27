@@ -5,13 +5,13 @@
 
     <fieldset>
       <label>Phrase:
-        <input type="text" ngModel name="phrase" placeholder="I love JavaScript!">
+        <input type="text" [(ngModel)]="cipherModel.phrase" name="phrase" placeholder="I love JavaScript!">
       </label>
     </fieldset>
 
     <fieldset>
       <label>Offset by..
-        <input type="number" ngModel name="offset">  Places
+        <input type="number" [(ngModel)]="cipherModel.offset" name="offset">  Places
       </label>
     </fieldset>
 
@@ -20,6 +20,8 @@
 
   <section class="display">
     {{ cipherForm.value | json }}
+    <hr />
+    {{ cipherModel | json }}
   </section>
 
 </main>

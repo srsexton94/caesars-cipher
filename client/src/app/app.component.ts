@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Cipher } from './cipher'
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,12 @@ export class AppComponent {
   title = 'caesars-cipher';
 
   decodedPhrase: string = '';
-  phrase: string = '';
-  offset: number = 0;
+
+  cipherModel = new Cipher('I Love JavaScript!', 100)
 
   constructor() { }
 
-  decipher() {
-    this.decodedPhrase = this.phrase + this.offset
-  }
+  // decipher() {
+  //   this.decodedPhrase = this.phrase + this.offset
+  // }
 }
