@@ -5,14 +5,36 @@
 
     <fieldset>
       <label>Phrase:
-        <input type="text" #phrase="ngModel" [(ngModel)]="cipherModel.phrase" name="phrase" required placeholder="I love JavaScript!">
+        <input
+          [class.invalid]="phrase.invalid && phrase.touched"
+          type="text"
+          #phrase="ngModel"
+          [(ngModel)]="cipherModel.phrase"
+          name="phrase"
+          required
+          placeholder="I love JavaScript!"
+        >
       </label>
+      <small [class.hidden]="phrase.valid || phrase.untouched">
+        Enter a phrase to be decoded!
+      </small>
     </fieldset>
 
     <fieldset>
       <label>Offset by
-        <input type="number" #offset="ngModel" [(ngModel)]="cipherModel.offset" name="offset" required>  Places
+        <input
+          [class.invalid]="offset.invalid && offset.touched"
+          type="number"
+          #offset="ngModel"
+          [(ngModel)]="cipherModel.offset"
+          name="offset"
+          required
+        >
+          Places
       </label>
+      <small [class.hidden]="offset.valid || offset.untouched">
+        Specify how many places to offset your phrase!
+      </small>
     </fieldset>
 
     <button type="submit">Decipher it!</button>

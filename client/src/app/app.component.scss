@@ -12,6 +12,20 @@ form {
   fieldset {
     border: 0px;
   }
+
+  small {
+    color: red;
+    display: block;
+    font-size: .5em;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .invalid {
+    border: 2px solid red;
+  }
 }
 
 .display {

@@ -11,7 +11,7 @@ export class AppComponent {
 
   decodedPhrase: string = '';
 
-  cipherModel = new Cipher('I Love JavaScript!', 100)
+  cipherModel = new Cipher('', 0)
 
   constructor() { }
 
