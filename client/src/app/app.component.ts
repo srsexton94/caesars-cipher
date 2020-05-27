@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'caesars-cipher';
+
+  decodedPhrase: string = '';
+
+  constructor() { }
+
+  getFormFields() {
+    this.decodedPhrase += 'a'
+  }
 }

@@ -1,25 +1,3 @@
-
-<style>
-  form {
-    border: 1px solid black;
-    margin: 10vh auto;
-    padding: 3rem 0;
-    text-align: center;
-    width: 30vw;
-  }
-  fieldset {
-    border: 0px;
-  }
-
-  .display {
-    border: 1px solid black;
-    height: 10vh;
-    margin: auto;
-    width: 40vw;
-  }
-</style>
-
-
 <main class="toolbar" role="banner">
   <form>
       <legend>Caesar's Cipher</legend>
@@ -32,9 +10,11 @@
         <label>Offset
           <input type="number">
         </label>
+        <input type="submit">
       </fieldset>
-      <input type="submit">
     </form>
+    <button (click)="getFormFields()">Scream!</button>
     <section class="display">
+      {{ decodedPhrase }}
     </section>
 </main>

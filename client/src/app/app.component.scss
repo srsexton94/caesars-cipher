@@ -1,0 +1,22 @@
+button {
+  display: block;
+  margin: 5vh auto;
+}
+form {
+  border: 1px solid black;
+  margin: 5vh auto;
+  padding: 3rem 0;
+  text-align: center;
+  width: 30vw;
+
+  fieldset {
+    border: 0px;
+  }
+}
+
+.display {
+  border: 1px solid black;
+  height: 10vh;
+  margin: 5vh auto;
+  width: 40vw;
+}
