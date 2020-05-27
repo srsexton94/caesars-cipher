@@ -1,6 +1,40 @@
 
-<style></style>
+<style>
+  form {
+    border: 1px solid black;
+    margin: 10vh auto;
+    padding: 3rem 0;
+    text-align: center;
+    width: 30vw;
+  }
+  fieldset {
+    border: 0px;
+  }
+
+  .display {
+    border: 1px solid black;
+    height: 10vh;
+    margin: auto;
+    width: 40vw;
+  }
+</style>
+
 
 <main class="toolbar" role="banner">
-  <h1>Hello World!</h1>
+  <form>
+      <legend>Caesar's Cipher</legend>
+      <fieldset>
+        <label>Phrase:
+          <input type="text" placeholder="I love JavaScript!">
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>Offset
+          <input type="number">
+        </label>
+      </fieldset>
+      <input type="submit">
+    </form>
+    <section class="display">
+    </section>
 </main>
