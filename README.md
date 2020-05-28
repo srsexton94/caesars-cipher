@@ -48,5 +48,7 @@ In addition to the Angular, Node, Nest, npm, and Jest documentation listed above
 
 ## Future Goals
 In future iterations of this project I would like to...
+* implement functionality that utilizes the other attributes of the `cipher` resource in the API (ie not just 'encoded')
 * implement functionality that utilizes the other HTTP requests (ie 'get', 'patch', 'delete')
-* implement functionality that utilizes the other attributes of the `cipher` resource in the API
+  - eg. add 'get' (index) and 'delete' routes (and adjust client to generate index view from this API - not localStorage) - so that user can delete a *specific* query, rather than only *all* of them
+  - eg. add 'get' (show) and 'patch' routes so that user can adjust the phrase/offset ammount for a specific previous query
