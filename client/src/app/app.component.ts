@@ -15,7 +15,7 @@ export class AppComponent {
   decodedPhrase: string = '';
   // empty string to fill with a user-facing error message upon erred API call
   errorMsg: string = '';
-  indexHtml: string = '';
+  indexHtml: string = localStorage.getItem('indexHtml');
 
   // creates a object with `phrase` and `offset` properties to reflect inputs
   cipherModel = new Cipher('', 0)
@@ -32,8 +32,11 @@ export class AppComponent {
       .subscribe(
         data => {
           this.decodedPhrase = data.encoded
+          if (this.indexHtml === null) {
+            this.indexHtml = ''
+          }
           this.indexHtml += '<li>' + this.cipherModel.phrase + ' --> ' + data.encoded + '</li>'
-          // console.log(this.cipherModel.phrase)
+          localStorage.setItem('indexHtml', this.indexHtml)
         },
         error => {
           this.errorMsg = 'Oops! Something went wrong, please try again later'
