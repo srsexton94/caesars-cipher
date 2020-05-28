@@ -47,6 +47,7 @@ In addition to the Angular, Node, Nest, npm, and Jest documentation listed above
 * [Academind Learn Nest.js from Scratch](https://www.youtube.com/watch?v=F_oOtaxb0L8)
 * [Nest Security Page](https://docs.nestjs.com/techniques/security) (re: CORS issue)
 * [Medium dltlabs Unit testing with NestJS](https://medium.com/@dltlabs/unit-testing-jest-with-nestjs-b5b043ac5598)
+* [Jest Cheatsheet](https://devhints.io/jest)
 
 ## Future Goals
 In future iterations of this project I would like to...
