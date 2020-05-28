@@ -24,6 +24,7 @@ form {
   box-shadow: -2px 4px 2px 2px $shadow;
   color: $text;
   float: left;
+  margin-top: 2vh;
   padding: 3rem 0;
   text-align: center;
   width: 40vw;
@@ -119,7 +120,7 @@ h1 {
   box-shadow: -2px 4px 2px 2px $shadow;
   color: $text;
   float: right;
-  height: 40vh;
+  height: 45vh;
   overflow-x: hidden;
   width: 40vw;
 
@@ -132,7 +133,15 @@ h1 {
 
   ul {
     border-right: .35rem dotted $text;
-    min-height: 25vh;
+    min-height: 22vh;
     overflow-y: scroll;
+  }
+
+  button {
+    border: 1px solid $error;
+    border-radius: 7%;
+    color: $error;
+    height: 1.5rem;
+    font-style: italic;
   }
 }

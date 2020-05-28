@@ -11,25 +11,31 @@ import { EncodingService } from './encoding.service'
 export class AppComponent {
   title = 'caesars-cipher';
 
-  // placeholder empty string to fill with returned data from API
+  // dispaly returned data from API
   decodedPhrase: string = '';
-  // empty string to fill with a user-facing error message upon erred API call
+  // display a user-facing error message
   errorMsg: string = '';
+  // display query index (from localStorage)
   indexHtml: string = localStorage.getItem('indexHtml');
 
-  // creates a object with `phrase` and `offset` properties to reflect inputs
+  // uses `cipher.ts` for double binding with form
   cipherModel = new Cipher('', 0)
 
-  // accesses a service to make calls to the API
   constructor(
     private _encodingService: EncodingService
   ) {}
 
-  // function called when the user submits the form, makes the API call
-  // currently logs the response (only error, no API set up yet)
+  // clears previous queries (index view)
+  clearCodes() {
+    localStorage.clear()
+    this.indexHtml = localStorage.getItem('indexHtml')
+  }
+
+  // accesses `encodingService` from constructor to make POST request to the API
   onSubmit() {
     this._encodingService.encode(this.cipherModel)
       .subscribe(
+        // displays the response data and updates the index view (localStorage)
         data => {
           this.decodedPhrase = data.encoded
           if (this.indexHtml === null) {
@@ -38,6 +44,7 @@ export class AppComponent {
           this.indexHtml += '<li>' + this.cipherModel.phrase + ' --> ' + data.encoded + '</li>'
           localStorage.setItem('indexHtml', this.indexHtml)
         },
+        // displays a error message to the user & the console
         error => {
           this.errorMsg = 'Oops! Something went wrong, please try again later'
           console.log('Error: ', error)
