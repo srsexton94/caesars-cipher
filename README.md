@@ -2,28 +2,47 @@
 
 ![](screenshot.png)
 
-A full stack solution to Caesar's Cipher.  Will take an input phrase and a
-specified offset ammount, and output the correctly encoded solution.
+## Project Description
+A full stack solution to Caesar's Cipher built with an Angular 8 frontend and a Nest.js backend in node.js.  Will take an input phrase and a specified offset ammount, and output the correctly encoded solution.
 
-# Dependencies
+## Dependencies
 * [Angular.js](https://angular.io/guide/setup-local)
 * [Node.js](https://nodejs.org/es/docs/)
 * [Nest.js](https://docs.nestjs.com/)
+* [Node Package Manager (npm)](https://docs.npmjs.com/)
+
+## Set up & Installation
+* Initialize node package manager
+  - `npm init -y`
+* Initialize & run Angular client app
+  - `npm install -g @angular/cli`
+  - `ng new client`
+  - `cd client`
+  - `ng serve --open`
+* Initialize & run Nest server
+  - `npm install -g @nestjs/cli`
+  - `nest new server`
+  - `cd server`
+  - `npm run start`
 
 ## User Stories
 As a user I would like to be able to...
 * enter a phrase (string) and a offset ammount (number) into a form
-* submit that form to a successful call
+* submit that form to make an API call
 * receive a correctly encoded string in return
-* receive error messages/visual feedback for invalid inputs/bad requests
-* see my previous queries until the page reloads
-* be able to access my previous search queries
+* see error messages/visual feedback for invalid inputs/bad requests/etc..
+* see my previous search queries even as the page reloads
 
 ## Back-end Specifications
 * contain the logic for the Caesar's Cipher
-* implement uniting testing (api/src/app.controller.spec.ts)
+* implement uniting testing (see.. `./api/src/app.controller.spec.ts`)
 
 ## Aditional Resources
-In addition to documentation about, additional resources used for additional learning/guidance:
+In addition to the Angular, Node, and Nest documentation listed above, these resources were also used for additional learning/guidance:
 * [Codevolution Angular Forms Tutorial](https://www.youtube.com/watch?v=nGr3C3wbh9c&list=PLC3y8-rFHvwhwL-XH04cHOpJnkgRKykFi)
 * [Academind Learn Nest.js from Scratch](https://www.youtube.com/watch?v=F_oOtaxb0L8)
+
+## Future Goals
+In future iterations of this project I would like to...
+* implement functionality that utilizes the other HTTP requests (ie 'get', 'patch', 'delete')
+* implement functionality that utilizes the other attributes of the `cipher` resource in the API
