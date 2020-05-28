@@ -4,6 +4,7 @@
 
 ## Project Description
 A full stack solution to Caesar's Cipher built with an Angular 8 frontend and a Nest.js backend in node.js.  Will take an input phrase and a specified offset ammount, and output the correctly encoded solution.
+> [Video Walkthrough](https://youtu.be/dyulhdCT8Mo) (see also `./demo.mov`)
 
 ## Dependencies
 * [Angular.js](https://angular.io/guide/setup-local)
