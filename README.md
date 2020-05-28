@@ -26,6 +26,8 @@ A full stack solution to Caesar's Cipher built with an Angular 8 frontend and a 
   - `nest new server`
   - `cd server`
   - `npm run start`
+* Add Jest to CLI for testing
+  - `npm install -g jest-cli`
 
 ## User Stories
 As a user I would like to be able to...
