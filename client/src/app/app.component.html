@@ -1,47 +1,55 @@
 <main class="toolbar" role="banner">
   <h1>Caesar's Cipher</h1>
 
-  <form #cipherForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+  <section class="container">
+    <form #cipherForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
 
-    <fieldset>
-      <label>Phrase:
-        <input
-          [class.invalid]="phrase.invalid && phrase.touched"
-          id="phrase"
-          type="text"
-          #phrase="ngModel"
-          [(ngModel)]="cipherModel.phrase"
-          name="phrase"
-          required
-          placeholder="I love JavaScript!"
-        >
-      </label>
-      <small [class.hidden]="phrase.valid || phrase.untouched">
-        Enter a phrase to be decoded!
-      </small>
-    </fieldset>
+      <fieldset>
+        <label>Phrase:
+          <input
+            [class.invalid]="phrase.invalid && phrase.touched"
+            id="phrase"
+            type="text"
+            #phrase="ngModel"
+            [(ngModel)]="cipherModel.phrase"
+            name="phrase"
+            required
+            placeholder="I love JavaScript!"
+          >
+        </label>
+        <small [class.hidden]="phrase.valid || phrase.untouched">
+          Enter a phrase to be decoded!
+        </small>
+      </fieldset>
 
-    <fieldset>
-      <label>Offset by
-        <input
-          [class.invalid]="offset.invalid && offset.touched"
-          id="offset"
-          type="number"
-          #offset="ngModel"
-          [(ngModel)]="cipherModel.offset"
-          name="offset"
-          min="0"
-          required
-        >
-          Places
-      </label>
-      <small [class.hidden]="offset.valid || offset.untouched">
-        Specify how many places to offset your phrase?
-      </small>
-    </fieldset>
+      <fieldset>
+        <label>Offset by
+          <input
+            [class.invalid]="offset.invalid && offset.touched"
+            id="offset"
+            type="number"
+            #offset="ngModel"
+            [(ngModel)]="cipherModel.offset"
+            name="offset"
+            min="0"
+            required
+          >
+            Places
+        </label>
+        <small [class.hidden]="offset.valid || offset.untouched">
+          Specify how many places to offset your phrase?
+        </small>
+      </fieldset>
 
-    <button [disabled]="cipherForm.form.invalid" type="submit">Decipher it!</button>
-  </form>
+      <button [disabled]="cipherForm.form.invalid" type="submit">Decipher it!</button>
+    </form>
+
+    <section class="index">
+      <h4>Your secret codes!</h4>
+      <ul [innerHtml]="indexHtml">
+      </ul>
+    </section>
+  </section>
 
   <section class="display">
     {{ decodedPhrase }}

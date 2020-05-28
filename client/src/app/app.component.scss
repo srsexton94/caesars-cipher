@@ -23,10 +23,10 @@ form {
   border-radius: 15%;
   box-shadow: -2px 4px 2px 2px $shadow;
   color: $text;
-  margin: 5vh auto;
+  float: left;
   padding: 3rem 0;
   text-align: center;
-  width: 50vw;
+  width: 40vw;
 
   button {
     border-color: $text;
@@ -74,7 +74,7 @@ form {
   }
 
   #offset {
-    width: 4vw;
+    width: 5vh;
   }
 }
 
@@ -88,9 +88,15 @@ h1 {
   text-align: center;
 }
 
+.container {
+  margin: auto;
+  width: 85vw;
+}
+
 .display {
   background-color: $form;
   box-shadow: -2px 4px 2px 2px $shadow;
+  display: inline-block;
   font-family: monospace;
   font-size: 2em;
   height: 12vh;
@@ -104,5 +110,29 @@ h1 {
     color: $error;
     font-size: .75em;
     font-style: italic;
+  }
+}
+
+.index {
+  background-color: $form;
+  border-radius: 5%;
+  box-shadow: -2px 4px 2px 2px $shadow;
+  color: $text;
+  float: right;
+  height: 40vh;
+  overflow-x: hidden;
+  width: 40vw;
+
+  h4 {
+    font-family: monospace;
+    font-size: 1.25em;
+    font-style: italic;
+    text-align: center;
+  }
+
+  ul {
+    border-right: .35rem dotted $text;
+    min-height: 25vh;
+    overflow-y: scroll;
   }
 }

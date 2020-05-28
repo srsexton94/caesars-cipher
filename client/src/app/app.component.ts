@@ -13,9 +13,9 @@ export class AppComponent {
 
   // placeholder empty string to fill with returned data from API
   decodedPhrase: string = '';
-
   // empty string to fill with a user-facing error message upon erred API call
   errorMsg: string = '';
+  indexHtml: string = '';
 
   // creates a object with `phrase` and `offset` properties to reflect inputs
   cipherModel = new Cipher('', 0)
@@ -30,7 +30,11 @@ export class AppComponent {
   onSubmit() {
     this._encodingService.encode(this.cipherModel)
       .subscribe(
-        data => this.decodedPhrase = data.encoded,
+        data => {
+          this.decodedPhrase = data.encoded
+          this.indexHtml += '<li>' + this.cipherModel.phrase + ' --> ' + data.encoded + '</li>'
+          // console.log(this.cipherModel.phrase)
+        },
         error => {
           this.errorMsg = 'Oops! Something went wrong, please try again later'
           console.log('Error: ', error)
