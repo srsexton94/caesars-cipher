@@ -10,6 +10,7 @@ A full stack solution to Caesar's Cipher built with an Angular 8 frontend and a 
 * [Node.js](https://nodejs.org/es/docs/)
 * [Nest.js](https://docs.nestjs.com/)
 * [Node Package Manager (npm)](https://docs.npmjs.com/)
+* [Jest](https://jestjs.io/docs/en/getting-started.html)
 
 ## Set up & Installation
 * Initialize node package manager
@@ -38,9 +39,11 @@ As a user I would like to be able to...
 * implement uniting testing (see.. `./api/src/app.controller.spec.ts`)
 
 ## Aditional Resources
-In addition to the Angular, Node, and Nest documentation listed above, these resources were also used for additional learning/guidance:
+In addition to the Angular, Node, Nest, npm, and Jest documentation listed above, these resources were also used for additional learning/guidance:
 * [Codevolution Angular Forms Tutorial](https://www.youtube.com/watch?v=nGr3C3wbh9c&list=PLC3y8-rFHvwhwL-XH04cHOpJnkgRKykFi)
 * [Academind Learn Nest.js from Scratch](https://www.youtube.com/watch?v=F_oOtaxb0L8)
+* [Nest Security Page](https://docs.nestjs.com/techniques/security) (re: CORS issue)
+* [Medium dltlabs Unit testing with NestJS](https://medium.com/@dltlabs/unit-testing-jest-with-nestjs-b5b043ac5598)
 
 ## Future Goals
 In future iterations of this project I would like to...
