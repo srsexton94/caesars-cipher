@@ -99,4 +99,10 @@ h1 {
   padding-bottom: 0;
   text-align: center;
   width: 105vw;
+
+  .error {
+    color: $error;
+    font-size: .75em;
+    font-style: italic;
+  }
 }
