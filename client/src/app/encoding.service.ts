@@ -6,7 +6,7 @@ import { Cipher } from './cipher';
   providedIn: 'root'
 })
 export class EncodingService {
-  _url = ''
+  _url = 'http://localhost:3000/ciphers'
   constructor(
     private _http: HttpClient
   ) { }
