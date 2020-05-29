@@ -39,7 +39,7 @@ As a user I would like to be able to...
 
 ## Back-end Specifications
 * contain the logic for the Caesar's Cipher
-* implement uniting testing (see.. `./api/src/app.controller.spec.ts`)
+* implement uniting testing (see.. `./api/src/ciphers.controller.spec.ts`)
 
 ## Aditional Resources
 In addition to the Angular, Node, Nest, npm, and Jest documentation listed above, these resources were also used for additional learning/guidance:
